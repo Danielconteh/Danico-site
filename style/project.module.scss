@@ -1,0 +1,55 @@
+.potfolio_container {
+  grid-column: startPoint / -1;
+  grid-row: 5 / 6; //explict row specifid for the parents
+  padding: 3rem 1rem;
+}
+
+.image_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3rem 8rem;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  @media screen and (max-width: 50em) {
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+
+    padding: 3rem 2rem;
+  }
+  @media screen and (max-width: 31.25em) {
+    padding: 2rem 0.5rem;
+    gap: 2rem;
+  }
+  // images links
+  a {
+    background: none;
+    display: block;
+    position: relative;
+    padding: 1rem 0rem;
+
+    &:visited {
+      background: none;
+    }
+    &::after {
+      // content: url("https://api.iconify.design/charm/link-external.svg");
+      content: url("https://api.iconify.design/charm/link-external.svg?color=white&width=22");
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      transform: scale(0);
+      transition: all 200ms ease;
+      color: #f1f1f1;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover::after {
+      transform: scale(1);
+    }
+  }
+}

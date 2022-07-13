@@ -1,0 +1,121 @@
+.skill_parent_grid {
+  grid-column: startPoint / -1;
+  grid-row: 4 / 5;
+  padding: 3rem 1rem;
+}
+.skill_container_wrapper {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr) 1fr; //five column grid
+  //five column grid
+  padding: 3rem 1rem;
+  @media screen and (max-width: 50em) {
+    padding: 2rem 1rem;
+  }
+}
+.skill_info_container {
+  padding: 2rem;
+  grid-column: 1 / 5;
+
+  @media screen and (max-width: 50em) {
+    grid-column: 1/-1;
+  }
+  @media screen and (max-width: 31.25em) {
+    padding: 1rem;
+  }
+
+  display: flex; // to style the languages & DB [inside of the grid]
+  justify-content: space-evenly;
+  @media screen and (max-width: 31.25em) {
+    flex-direction: column;
+  }
+}
+
+// styling all h3 heading inside of the grid
+// ====
+
+// icon extend
+
+.languages,
+.database,
+.what_i_can_do {
+  h3 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    color: transparent;
+    background-image: linear-gradient(
+      105deg,
+      coral 0%,
+      yellow 25%,
+      red 40%,
+      coral 50%,
+      yellow 80%,
+      red 100%
+    );
+    background-clip: text;
+    @media screen and (max-width: 31.25em) {
+      padding: 0.8rem;
+    }
+
+    font-family: Open Sans Condensed;
+    font-weight: 400;
+
+    i {
+      color: #fff;
+      font-size: 3rem;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+  }
+
+  // ===================
+  // ===================
+  ul {
+    list-style: none;
+    text-align: center;
+    padding: 0rem 1rem;
+    li {
+      font-size: 1.7rem;
+      letter-spacing: 0.2rem;
+      padding: 0.8rem;
+      @media screen and (max-width: 50em) {
+        font-size: 2rem;
+        padding: 2rem; // this will over ride the 0.8rem above
+      }
+      @media screen and (max-width: 31.25em) {
+        padding: 1rem; // this will over ride the 2rem above
+      }
+
+      text-transform: uppercase;
+      font-family: Zen Loop, cursive;
+
+      i {
+        vertical-align: middle;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+// =======================
+// ======================
+.languages,
+.database {
+  @media screen and (max-width: 31.25em) {
+    padding-top: 2rem;
+  }
+}
+
+// ======================
+// ======================
+.what_i_can_do {
+  padding: 2.3rem;
+  grid-column: 5 / -1;
+  @media screen and (max-width: 50em) {
+    grid-column: 2/6;
+    text-align: center;
+  }
+  @media screen and (max-width: 31.25em) {
+    padding: 1rem;
+  }
+}

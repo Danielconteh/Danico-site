@@ -1,0 +1,114 @@
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.nav_center {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  @media screen and (max-width: 50em) {
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0rem;
+  }
+}
+.nav_header {
+  padding: 0rem;
+  @media screen and (max-width: 50em) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem;
+
+    width: 100%;
+  }
+  span {
+    font-size: 3rem;
+    vertical-align: middle;
+    @media screen and (max-width: 50em) {
+      font-size: 2.5rem;
+    }
+    text-transform: uppercase;
+    font-family: Italianno, cursive;
+    font-weight: 700;
+    color: transparent;
+    background-image: linear-gradient(
+      105deg,
+      coral 0%,
+      yellow 25%,
+      red 40%,
+      coral 50%,
+      yellow 80%,
+      red 100%
+    );
+    background-clip: text;
+    margin-left: 2rem;
+    padding: 0.2rem 0rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+.nav_toggle {
+  display: none;
+  @media screen and (max-width: 50em) {
+    display: flex;
+    font-size: 2rem;
+    color: #fff;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    margin-right: 2rem;
+  }
+}
+
+// ==============
+// li - starting point
+.links_container {
+  // height: auto !important;
+
+  @media screen and (max-width: 50em) {
+    overflow: hidden;
+    transition: 0.5s cubic-bezier(0.57, 0.31, 0, 1.15);
+    height: 0;
+  }
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 50em) {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+}
+.links a:link,
+.links a:visited {
+  padding: 0rem 1rem;
+  font-family: Zen Loop, cursive;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: capitalize;
+  &:hover {
+    color: orange;
+  }
+  @media screen and (max-width: 50em) {
+    font-weight: 400;
+    font-size: 2.5rem;
+
+    letter-spacing: 2px;
+    display: block;
+    padding: 1.3rem;
+    // transition: all 200ms linear;
+  }
+}

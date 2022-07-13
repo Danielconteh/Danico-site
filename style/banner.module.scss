@@ -1,0 +1,104 @@
+//  =======
+// media query break-point[
+//  800= 50em,
+//  500=31.25,
+//  460=28.75em,
+//  300=18.75em
+// ]
+//  ========
+.banner_container {
+  grid-column: startPoint / endEnd;
+  grid-row: 2 / 3;
+  position: relative;
+  overflow: hidden;
+}
+.banner_img {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  object-position: 20% 100%;
+  overflow: hidden;
+
+  @media screen and (max-width: 43.5em) {
+    height: 60vh;
+  }
+}
+
+.bannerText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5rem;
+  &__text {
+    color: #f1f1f1;
+    font-size: 2.75rem;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Lato cursive;
+    font-weight: 500;
+    @media screen and (max-width: 43.5em) {
+      font-size: 2.5rem;
+    }
+    @media screen and (max-width: 18.75em) {
+      font-size: 2rem;
+    }
+    &__content {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// TYPING EFFECT
+.type_text {
+  // color: #ee9356;
+  color: transparent;
+  background-image: linear-gradient(
+    105deg,
+    coral 0%,
+    yellow 25%,
+    red 40%,
+    coral 50%,
+    yellow 80%,
+    red 100%
+  );
+  background-clip: text;
+  font-weight: bolder;
+}
+.cusorBlink {
+  display: inline-block;
+  width: 3px;
+  background: #ddd;
+  margin-left: 0.2rem;
+  animation: blink 1s infinite;
+}
+
+.blink_remove {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background: #ddd;
+  }
+  49% {
+    background: #ddd;
+  }
+
+  50% {
+    background: transparent;
+  }
+  99% {
+    background: transparent;
+  }
+
+  100% {
+    background: #ddd;
+  }
+}
