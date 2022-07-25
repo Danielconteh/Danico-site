@@ -54,8 +54,6 @@ const Contact = () => {
         ref={form}
         onSubmit={submitFun}
         className={style.form}
-        autoCorrect
-        autoComplete
         data-sal="zoom-in"
         data-sal-duration="1000"
         data-sal-delay="200"
@@ -111,7 +109,7 @@ const Contact = () => {
               <button
                 className={style.button}
                 type="submit"
-                disabled={spin ? false : true}
+                disabled={!spin ? false : true}
               >
                 {!spin ? (
                   <>

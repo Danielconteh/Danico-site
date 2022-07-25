@@ -1,28 +1,11 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 
 import * as Style from "../../style/project.module.scss"
+import { GatsbyImage,getImage } from "gatsby-plugin-image"
+import { uid } from 'uid';
 
 // import { Link } from 'gatsby'
 
-const query = graphql`
-  {
-    images: allFile(
-      filter: { relativePath: { nin: ["banner-1.jpg", "banner-2.jpg"] } }
-      sort: { fields: relativePath }
-    ) {
-      totalCount
-      edges {
-        node {
-          relativePath
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-          }
-        }
-      }
-    }
-  }
-`
 
 const externalSitLink = [
   "https://bedify.netlify.app/", // bedify
@@ -32,11 +15,7 @@ const externalSitLink = [
   "https://luxury-building.vercel.app/", // luxury-building
 ]
 
-const Potfolio = () => {
-  const data = useStaticQuery(query)
-  const {
-    images: { edges },
-  } = data
+const Project = ({ data}) => {
 
   return (
     // id = projects (for smooth scrolling)
@@ -52,13 +31,13 @@ const Potfolio = () => {
       {/* grid of websit */}
 
       <div className={Style.image_container}>
-        {edges.map((img, i) => {
-          const { src, srcSet, sizes } =
-            img?.node?.childImageSharp?.gatsbyImageData?.images?.fallback
+      {data?.images?.edges.map((el, i) => {
+    
           const easeInTrans = "ease-out-back"
           return (
             <>
               <a
+              key={uid()}
                 href={externalSitLink[i]}
                 target="_blank"
                 rel="noreferrer"
@@ -67,24 +46,15 @@ const Potfolio = () => {
                 data-sal-delay="200"
                 data-sal-easing={easeInTrans}
               >
-                <img
-                  src={src}
-                  alt="banner"
-                  sizes={sizes}
-                  srcset={srcSet}
-                  style={{
-                    objectFit: "cover",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                />
+                <GatsbyImage image={getImage(el.node)} alt="project" />
+                
               </a>
             </>
           )
-        })}
+        })} 
       </div>
     </div>
   )
 }
 
-export default Potfolio
+export default Project

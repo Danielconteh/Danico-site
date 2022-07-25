@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
+import { uid } from 'uid';
 import { FaBars } from "react-icons/fa"
 import { links } from "./data"
 import * as style from "../style/navbar.module.scss"
@@ -49,7 +50,6 @@ const Navbar = () => {
       })
     })
     const target = e.target.getAttribute("href")
-    console.log(target)
     const location = document.querySelector(target).offsetTop
     window.scrollTo({
       left: 0,
@@ -105,14 +105,16 @@ const Navbar = () => {
         <div className={style.links_container} ref={linksContainerRef}>
           <ul className={style.links} ref={linksRef}>
             {links.map(link => {
+
               const { id, url, text } = link
+             
               return (
-                <li key={id}>
+                <li key={uid(16)}>
                   <a
                     onClick={scrollToPoint}
                     href={url}
                     style={{
-                      color: id === 1 && "orange",
+                      color: id === 1 && "orange", // intial start
                     }}
                   >
                     {text}

@@ -2,6 +2,7 @@
   grid-column: startPoint / -1;
   grid-row: 6 / 7;
   padding: 3rem 1rem;
+  overflow-x: hidden;
 }
 
 // form setup
@@ -14,16 +15,23 @@
     width: 70%;
   }
 
+  @media screen and (max-width: 40.625em) {
+    padding: 4rem 1rem;
+
+    // 650px
+    //800
+    width: 85%;
+  }
+
   @media screen and (max-width: 37.5em) {
     //600
-    width: 90%;
-    padding: 4rem 1.5rem;
+    width: 95%;
+    padding: 4rem 1rem;
   }
 
   @media screen and (max-width: 26.25em) {
     //420
-    width: 95%;
-    padding: 4rem 1rem;
+    padding: 4rem 0.5rem;
   }
 
   @media screen and (max-width: 21.875em) {
@@ -84,9 +92,8 @@
       outline: none;
       border: 1px solid #555;
       letter-spacing: 0.12rem;
-      text-transform: capitalize;
-      font-size: 2.5rem;
-      font-family: Zen Loop, cursive;
+      font-size: 1.6rem;
+      font-family: "Roboto", sans-serif;
 
       @media screen and (max-width: 50em) {
         font-size: 2rem;
@@ -115,7 +122,7 @@
 
 // ===================
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px rgba(24, 25, 21, 0.9) inset !important;
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.95) inset !important;
   -webkit-text-fill-color: #fff !important;
   caret-color: #fff;
 }

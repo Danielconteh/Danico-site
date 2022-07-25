@@ -7,6 +7,8 @@ html {
   font-size: 62.5%; // 10px
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
   @media screen and (max-width: 50em) {
     font-size: 50%;
   }
@@ -46,7 +48,7 @@ body {
     red 100%
   );
   background-clip: text;
-  text-shadow: #f9a602 0px 0px 50px, #f9a602 0px 0px 75px;
+  text-shadow: #f9a602 0px 0px 3rem, #f9a602 0px 0px 3rem;
   position: relative;
 }
 .center_title {
@@ -56,7 +58,7 @@ body {
 .uderline {
   // background: rgb(0, 0, 0, 0.7);
   // background: red;
-  background: yellow;
+  background: red;
   height: 1px;
   display: inline-block;
   position: absolute;
@@ -116,4 +118,12 @@ img {
 
 // GRAMERRLY
 
-//
+// How to remove the blue highlight of button on mobile? (https://stackoverflow.com/questions/45049873/how-to-remove-the-blue-highlight-of-button-on-mobiles)
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}

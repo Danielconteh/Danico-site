@@ -11,8 +11,9 @@ import Footer from "./Footer"
 // CSS SECTION
 import "../../style/index.scss"
 import "rc-banner-anim/assets/index.css" // BANNER ANIMATION SECTION
+import { graphql } from "gatsby"
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <>
       <Helmet
@@ -33,7 +34,7 @@ export default function Home() {
         <Banner />
         <About />
         <Skill />
-        <Project />
+        <Project data={data}/>
         <Contact />
         <Footer />
       </div>
@@ -44,3 +45,20 @@ export default function Home() {
 //  ;<h2>
 //    DANICO LEARNIG GATSBY JS <span>😜</span>!
 //  </h2>
+
+export const query =  graphql`
+{
+  images: allFile(
+    filter: {relativePath: {nin: ["banner-1.jpg", "banner-2.jpg"]}}
+    sort: {fields: relativePath}
+  ) {
+    edges {
+      node {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+}
+`

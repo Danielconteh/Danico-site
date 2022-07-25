@@ -1,8 +1,27 @@
-import React from "react"
+import React, { useEffect ,useState} from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import * as style from "../../style/about.module.scss"
 
 const About = () => {
+  const [slide, setSlider] = useState(false)
+  const slide_right = slide && "slide-right"
+  const slide_duration = slide &&  "1000"
+  const slide_delay = slide &&  "100"
+
+const checkWindow= ()=>{
+  if(window.innerWidth > 768) return setSlider(true)
+    return setSlider(false)
+  }
+
+useEffect(() => {
+  checkWindow()
+  window.addEventListener("resize", checkWindow);
+
+  return ()=>{
+    window.addEventListener("resize", checkWindow)
+  }
+}, [])
+console.log(slide)
   return (
     // id = about (for smooth scrolling)
 
@@ -18,9 +37,9 @@ const About = () => {
       <article className={style.about_container__wrapper}>
         <div
           className={style.about_info}
-          data-sal="slide-right"
-          data-sal-duration="1000"
-          data-sal-delay="100"
+          data-sal= {slide_right}
+          data-sal-duration= {slide_duration}
+          data-sal-delay= {slide_delay}
           data-sal-easing="ease-out-back"
         >
           Every person has their unique story. Here is a glimpse into mine. My
@@ -40,12 +59,13 @@ const About = () => {
           data-sal-easing="ease-out-back"
         >
           <StaticImage
-            src="/home/danico/Desktop/danico/static/dan.jpg"
+            src="../../images/dan.jpg"
             alt="Danico"
             className={style.about_img}
             placeholder="blurred"
             layout="constrained"
             objectFit="contain"
+            width={350}
           ></StaticImage>
         </div>
       </article>

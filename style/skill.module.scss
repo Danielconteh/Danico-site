@@ -2,6 +2,7 @@
   grid-column: startPoint / -1;
   grid-row: 4 / 5;
   padding: 3rem 1rem;
+  overflow-x: hidden;
 }
 .skill_container_wrapper {
   display: grid;
@@ -42,7 +43,7 @@
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
-    padding: 1rem;
+    padding: 0.5rem;
     color: transparent;
     background-image: linear-gradient(
       105deg,
@@ -55,7 +56,7 @@
     );
     background-clip: text;
     @media screen and (max-width: 31.25em) {
-      padding: 0.8rem;
+      padding: 0rem;
     }
 
     font-family: Open Sans Condensed;
