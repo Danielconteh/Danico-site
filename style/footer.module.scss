@@ -1,5 +1,6 @@
 .footer_container {
   background-color: rgba(0, 0, 0, 0.85);
+  // background: #222;
   grid-column: startPoint / -1;
   grid-row: 7 / 8;
   padding: 4rem;
@@ -26,4 +27,11 @@
   text-transform: capitalize;
   font-family: Zen Loop, cursive;
   letter-spacing: 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_img {
+    width: 6rem;
+    height: 6rem;
+  }
 }
