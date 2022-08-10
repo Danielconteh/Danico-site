@@ -49,7 +49,7 @@ export default function Home({data}) {
 export const query =  graphql`
 {
   images: allFile(
-    filter: {relativePath: {nin: ["banner-1.jpg", "banner-2.jpg"]}}
+    filter: {relativePath: {nin: ["banner1.jpg", "banner2.jpg"]}}
     sort: {fields: relativePath}
   ) {
     edges {

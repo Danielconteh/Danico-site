@@ -54,10 +54,6 @@ const Contact = () => {
         ref={form}
         onSubmit={submitFun}
         className={style.form}
-        data-sal="zoom-in"
-        data-sal-duration="1000"
-        data-sal-delay="200"
-        data-sal-easing="ease-out-back"
       >
         <fieldset className={style.fieldset}>
           <legend className={style.legend}>email me</legend>

@@ -19,7 +19,6 @@ import { MdComputer } from "react-icons/md"
 // =====end of icon======
 import * as style from "../../style/skill.module.scss"
 const Skill = () => {
-  const tranStyleZoomOut = "zoom-out"
   return (
     // id = skill (for smooth scrolling)
 
@@ -45,12 +44,7 @@ const Skill = () => {
             </h3>
 
             <div>
-              <ul
-                data-sal={tranStyleZoomOut}
-                data-sal-duration="1000"
-                data-sal-delay="200"
-                data-sal-easing="ease-out-back"
-              >
+              <ul>
                 {/* ========HTML & CSS========= */}
                 <li>
                   {" "}
@@ -113,12 +107,7 @@ const Skill = () => {
               </i>{" "}
               database
             </h3>
-            <ul
-              data-sal="zoom-out"
-              data-sal-duration="1000"
-              data-sal-delay="200"
-              data-sal-easing="ease-out-back"
-            >
+            <ul>
               {/* =====MONGODB & NODE JS===== */}
               <li>
                 {" "}
@@ -171,12 +160,7 @@ const Skill = () => {
             </i>{" "}
             What Can I Do?
           </h3>
-          <ul
-            data-sal="zoom-out"
-            data-sal-duration="1000"
-            data-sal-delay="200"
-            data-sal-easing="ease-out-back"
-          >
+          <ul>
             <li>build websites</li>
             <li>build mobile apps</li>
             <li> Build REST API's</li>

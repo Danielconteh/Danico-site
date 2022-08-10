@@ -33,7 +33,6 @@ const Project = ({ data}) => {
       <div className={Style.image_container}>
       {data?.images?.edges.map((el, i) => {
     
-          const easeInTrans = "ease-out-back"
           return (
             <>
               <a
@@ -41,10 +40,7 @@ const Project = ({ data}) => {
                 href={externalSitLink[i]}
                 target="_blank"
                 rel="noreferrer"
-                data-sal="flip-up"
-                data-sal-duration="1000"
-                data-sal-delay="200"
-                data-sal-easing={easeInTrans}
+               
               >
                 <GatsbyImage image={getImage(el.node)} alt="project" />
                 

@@ -1,27 +1,9 @@
-import React, { useEffect ,useState} from "react"
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import * as style from "../../style/about.module.scss"
 
 const About = () => {
-  const [slide, setSlider] = useState(false)
-  const slide_right = slide && "slide-right"
-  const slide_duration = slide &&  "1000"
-  const slide_delay = slide &&  "100"
 
-const checkWindow= ()=>{
-  if(window.innerWidth > 768) return setSlider(true)
-    return setSlider(false)
-  }
-
-useEffect(() => {
-  checkWindow()
-  window.addEventListener("resize", checkWindow);
-
-  return ()=>{
-    window.addEventListener("resize", checkWindow)
-  }
-}, [])
-console.log(slide)
   return (
     // id = about (for smooth scrolling)
 
@@ -37,10 +19,6 @@ console.log(slide)
       <article className={style.about_container__wrapper}>
         <div
           className={style.about_info}
-          data-sal= {slide_right}
-          data-sal-duration= {slide_duration}
-          data-sal-delay= {slide_delay}
-          data-sal-easing="ease-out-back"
         >
           Every person has their unique story. Here is a glimpse into mine. My
           name is Daniel conteh. I am currently studying Computer Science and
@@ -53,13 +31,9 @@ console.log(slide)
         </div>
         <div
           className={style.test}
-          data-sal="slide-left"
-          data-sal-duration="1000"
-          data-sal-delay="100"
-          data-sal-easing="ease-out-back"
         >
           <StaticImage
-            src="../../images/dan.jpg"
+            src="../../images/me2.jpg"
             alt="Danico"
             className={style.about_img}
             placeholder="blurred"

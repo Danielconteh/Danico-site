@@ -87,6 +87,8 @@ const Banner = () => {
           autoPlay
           arrow={false}
           thumb={false}
+          delay={5000}
+          duration={800}
           style={{
             position: "relative",
             zIndex: -1,

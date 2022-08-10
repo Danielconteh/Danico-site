@@ -19,7 +19,7 @@ const Navbar = () => {
       window.pageYOffset >
       Math.round(linksContainerRef.current.getBoundingClientRect().top * 2)
     ) {
-      navRef.current.style.background = "rgba(0,0,0,0.95)"
+      navRef.current.style.background = "rgba(0,0,0,.85)"
     } else {
       setTimeout(() => {
         navRef.current.style.background = "rgba(0,0,0,0.4)"
@@ -32,7 +32,7 @@ const Navbar = () => {
     if (window.innerWidth > 800) {
       linksContainerRef.current.style.height = "auto"
     } else {
-      linksContainerRef.current.style.height = "0px"
+      linksContainerRef.current.style.height = ""
       setShowLinks(false)
     }
     // when scroll set it back to false
@@ -69,10 +69,10 @@ const Navbar = () => {
     const linksHeight = linksRef.current.getBoundingClientRect().height
     if (showLinks) {
       linksContainerRef.current.style.height = `${linksHeight}px`
-      navRef.current.style.background = "rgba(0,0,0,0.95)"
+      navRef.current.style.background = "rgba(0,0,0,0.85)"
       document.body.addEventListener("click", bodyClose)
     } else {
-      linksContainerRef.current.style.height = "0px"
+      linksContainerRef.current.style.height = ""
       backGround_dark()
       document.body.removeEventListener("click", bodyClose)
     }
@@ -106,7 +106,7 @@ const Navbar = () => {
           <ul className={style.links} ref={linksRef}>
             {links.map(link => {
 
-              const { id, url, text } = link
+              const {  url, text } = link
              
               return (
                 <li key={uid(16)}>
@@ -114,7 +114,7 @@ const Navbar = () => {
                     onClick={scrollToPoint}
                     href={url}
                     style={{
-                      color: id === 1 && "orange", // intial start
+                      // color: id === 1 ? "orange":'', // intial starts
                     }}
                   >
                     {text}
