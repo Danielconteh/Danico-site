@@ -41,7 +41,7 @@ const Contact = () => {
   return (
     // id = contact (for smooth scrolling)
 
-    <div id="contact" className={style.contact_container}>
+    <div id="contact" className={[style.contact_container,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
           <h1>contact</h1>

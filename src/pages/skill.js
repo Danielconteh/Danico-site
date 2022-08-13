@@ -22,7 +22,7 @@ const Skill = () => {
   return (
     // id = skill (for smooth scrolling)
 
-    <main id="skill" className={style.skill_parent_grid}>
+    <main id="skill" className={[style.skill_parent_grid,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
           <h1>skill</h1>

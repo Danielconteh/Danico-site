@@ -20,7 +20,7 @@ const Project = ({ data}) => {
   return (
     // id = projects (for smooth scrolling)
 
-    <div id="projects" className={Style.potfolio_container}>
+    <div id="projects" className={[Style.potfolio_container,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
           <h1>projects</h1>

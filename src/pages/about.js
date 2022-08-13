@@ -7,7 +7,7 @@ const About = () => {
   return (
     // id = about (for smooth scrolling)
 
-    <main id="about" className={style.about_container__parent}>
+    <main id="about" className={[style.about_container__parent,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
           <h1>about</h1>
@@ -33,7 +33,7 @@ const About = () => {
           className={style.test}
         >
           <StaticImage
-            src="../../images/me2.jpg"
+            src="../../images/about_img.jpg"
             alt="Danico"
             className={style.about_img}
             placeholder="blurred"

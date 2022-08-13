@@ -93,6 +93,7 @@ const Banner = () => {
             position: "relative",
             zIndex: -1,
           }}
+          type={['across', 'vertical', 'acrossOverlay', 'verticalOverlay', 'gridBar', 'grid']}
         >
           {edges.map((img, i) => {
             const { src, srcSet, sizes } =

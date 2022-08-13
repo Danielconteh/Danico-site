@@ -31,13 +31,15 @@ export default function Home({data}) {
       ></Helmet>
       <div className="grid_container">
         <Navbar />
+
         <Banner />
-        <About />
-        <Skill />
-        <Project data={data}/>
-        <Contact />
-        <Footer />
-      </div>
+          <About />
+          <Skill />
+          <Project data={data}/>
+          <Contact />
+          <Footer />
+
+        </div>
     </>
   )
 }
