@@ -39,7 +39,7 @@ const Banner = () => {
       "developer",
       "designer",
       "programmer",
-      "Software Engineer",
+      // "Software Engineer",
       "creator",
     ]
     let currentIndex = 0 // arr[0 to end]
