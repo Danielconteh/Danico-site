@@ -9,6 +9,8 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  border-bottom: 0.3px solid rgba(255, 255, 255, 0.2);
+  outline: none !important;
 }
 
 .nav_center {
@@ -69,6 +71,8 @@
     border-color: transparent;
     cursor: pointer;
     margin-right: 2rem;
+    border: none;
+    outline: none !important;
   }
   appearance: none;
   -webkit-tap-highlight-color: transparent;

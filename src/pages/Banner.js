@@ -36,11 +36,11 @@ const Banner = () => {
 
   useEffect(() => {
     const arr = [
-      "creator",
-      "designer",
       "developer",
+      "designer",
       "programmer",
-      "content creator",
+      "Software Engineer",
+      "creator",
     ]
     let currentIndex = 0 // arr[0 to end]
     let charIndex = 0 // arr[0] = johnny [charIndex= j ----]
@@ -93,7 +93,8 @@ const Banner = () => {
             position: "relative",
             zIndex: -1,
           }}
-          type={['across', 'vertical', 'acrossOverlay', 'verticalOverlay', 'gridBar', 'grid']}
+          type='gridBar'
+          // {['across', 'vertical', 'acrossOverlay', 'verticalOverlay', 'gridBar', 'grid']}
         >
           {edges.map((img, i) => {
             const { src, srcSet, sizes } =

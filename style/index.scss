@@ -4,8 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
-   -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html {
   font-size: 62.5%; // 10px
@@ -105,8 +105,10 @@ img {
 // BANER ANIMATION
 .banner-user {
   height: 70vh;
-  @media screen and (max-width: 43.5em) {
-    height: 60vh;
+  object-fit: cover;
+  @media screen and (max-width: 43.75em) {
+    // (700px)
+    height: 47vh;
   }
 }
 .banner-user-elem {
