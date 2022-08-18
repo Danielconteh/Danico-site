@@ -19,7 +19,7 @@ const Contact = () => {
     setSpin(true)
 
     emailjs
-      .sendForm(
+      .sendForm( 
         "service_kicz1ac",
         "template_w8fzyct",
         form.current,
