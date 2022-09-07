@@ -24,7 +24,7 @@ const Project = ({ data}) => {
     <div id="projects" className={[Style.potfolio_container,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
-          <h1>projects</h1>
+          <div className={Style.header_h1}>projects</div>
           <div className="uderline"></div>
         </div>
       </div>

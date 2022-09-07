@@ -18,17 +18,20 @@ export default function Home({data}) {
     <>
       <Helmet
         htmlAttributes={{ lang: "en" }}
-        title="Danico"
+        title="Danico | my personal website"
         meta={[
-          { name: "description", content: "Daniel Conteh" },
+          { name: "description", content: "Daniel Conteh personal website | A website that give detail information about daniel conteh who lives in sierra leone!" },
           {
             name: "keywords",
             content:
-              "danico, daniel conteh, sierra leone, programmer, developer, coder, coding",
+              "danico, daniel conteh, sierra leone, programmer, developer, coder, coding, danico.com, software, website, websites,mobile aps, creator",
           },
           { name: "author", content: "Daniel Conteh" },
         ]}
-      ></Helmet>
+
+      >
+         <link rel="canonical" href="https://danico.netlify.app/"/>
+      </Helmet>
       <div className="grid_container">
         <Navbar />
 
@@ -64,3 +67,4 @@ export const query =  graphql`
   }
 }
 `
+//<link rel="canonical" href="{{ your-base-url }}{{ page-slug }}"/> 

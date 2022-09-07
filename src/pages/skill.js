@@ -25,7 +25,7 @@ const Skill = () => {
     <main id="skill" className={[style.skill_parent_grid,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
-          <h1>skill</h1>
+          <div className={style.header_h1}>skill</div>
           <div className="uderline"></div>
         </div>
       </div>

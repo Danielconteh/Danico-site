@@ -27,12 +27,15 @@ const Contact = () => {
       )
       .then(
         result => {
-          console.log(result.text)
+          console.log(result)
           setSpin(false)
+          alert('mesage sent sucessfully');
         },
         error => {
           setSpin(false)
           console.log(error.text)
+          alert('something went wrong! please try again');
+
         }
       )
     form.current.reset()
@@ -44,7 +47,7 @@ const Contact = () => {
     <div id="contact" className={[style.contact_container,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
-          <h1>contact</h1>
+          <div className={style.header_h1}>contact</div>
           <div className="uderline"></div>
         </div>
       </div>
