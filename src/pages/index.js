@@ -30,7 +30,7 @@ export default function Home({data}) {
         ]}
 
       >
-         <link rel="canonical" href="/"/>
+         <link rel="canonical" href="https://danico.netlify.app/"/>
       </Helmet>
       <div className="grid_container">
         <Navbar />
