@@ -10,7 +10,7 @@ const About = () => {
     <main id="about" className={[style.about_container__parent,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
-          <div className={style.header_h1}>about</div>
+          <h1 className={style.header_h1}>about</h1>
           <div className="uderline"></div>
         </div>
       </div>

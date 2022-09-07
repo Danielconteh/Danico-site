@@ -47,7 +47,7 @@ const Contact = () => {
     <div id="contact" className={[style.contact_container,'bg_clr'].join(' ')}>
       <div className="center_title">
         <div className="title_text">
-          <div className={style.header_h1}>contact</div>
+          <h4 className={style.header_h1}>contact</h4>
           <div className="uderline"></div>
         </div>
       </div>
