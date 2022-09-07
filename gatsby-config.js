@@ -6,6 +6,9 @@
 
 module.exports = {
   /* Your site config here */
+   siteMetadata: {
+    siteUrl: 'https://danico.netlify.app/'
+  },
 
   plugins: [
     `gatsby-plugin-sass`,
@@ -14,6 +17,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-minify`,
+     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://danico.netlify.app/',
+        sitemap: 'https://danico.netlify.app/sitemap.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    }
 
     {
       resolve: `gatsby-source-filesystem`,

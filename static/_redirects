@@ -1,6 +1,2 @@
-/home /:splat 301!
-https://www.danico.netlify.app/ /:splat 301!
-http://www.danico.netlify.app /:splat 301!
-danico.netlify /:splat 301!
-danico.com /:splat 301!
-danielconteh /:splat 301!
+/home /
+/\* /
