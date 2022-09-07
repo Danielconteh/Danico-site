@@ -24,7 +24,7 @@ module.exports = {
         sitemap: 'https://danico.netlify.app/sitemap.xml',
         policy: [{userAgent: '*', allow: '/'}]
       }
-    }
+    },
 
     {
       resolve: `gatsby-source-filesystem`,
