@@ -17,15 +17,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-minify`,
-     {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://danico.netlify.app/',
-        sitemap: 'https://danico.netlify.app/sitemap.xml',
-        policy: [{userAgent: '*', allow: '/'}]
-      }
-    },
-
+     `gatsby-plugin-robots-txt`,
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -35,13 +35,13 @@ const Skill = () => {
           <div className={style.languages}>
             {/* ======== LANGUAGES SECTION ================  */}
 
-            <h3>
+            <div className={style.header_h3}>
               {" "}
               <i>
                 <IoCodeSlashOutline />
               </i>{" "}
               languages
-            </h3>
+            </div >
 
             <div>
               <ul>
@@ -100,13 +100,13 @@ const Skill = () => {
 
           {/* ======== DATABASES SECTION ================  */}
           <div className={style.database}>
-            <h3>
+            <div className={style.header_h3}>
               {" "}
               <i>
                 <FiDatabase />
               </i>{" "}
               database
-            </h3>
+            </div >
             <ul>
               {/* =====MONGODB & NODE JS===== */}
               <li>
@@ -153,13 +153,13 @@ const Skill = () => {
         {/* ======== WHAT I CAN DO SECTION ================  */}
 
         <div className={style.what_i_can_do}>
-          <h3>
+          <div className={style.header_h3}>
             {" "}
             <i>
               <MdComputer />
             </i>{" "}
             What Can I Do?
-          </h3>
+          </div >
           <ul>
             <li>build websites</li>
             <li>build mobile apps</li>
