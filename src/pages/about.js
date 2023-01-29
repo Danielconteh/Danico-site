@@ -20,14 +20,12 @@ const About = () => {
         <div
           className={style.about_info}
         >
-          Every person has their unique story. Here is a glimpse into mine. My
-          name is Daniel conteh. I am currently studying Computer Science and
-          Engineering at Suliaha,Sierra Leone. While here, I grew interest in
-          Websites and started learning about them on my own and one thing led
-          to another and made me a Web developer. Currently looking for some
-          cool projects and Internships. Feel free to explore the rest of my
-          page as I hope you enjoy reading it as much as I have enjoyed creating
-          it!
+      <p>  Every person has their unique story. Here is a glimpse into mine. My is Daniel Conteh a programmer with over 5 years of experience in the tech industry. I received a Professional Diploma in Software Aplication and Database Management system from Alison online study in 2018. After graduation, I began my career as a software engineer and data scientist at a small startup company, where I worked on analyzing data, developing and maintaining web applications, Desktop and Mobile application.
+      </p>
+
+
+      <p>I worked as a data scientist at Bizpal Ltd and Sierrahub in 2021-2022. Where I was responsible for analyzing and interpreting large data sets and creating predictive models to help the organization, make data-driven decisions. </p>
+
         </div>
         <div
           className={style.test}
